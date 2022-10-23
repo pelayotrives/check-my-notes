@@ -4,7 +4,9 @@
 //? Command ---> npm i nodemon -D (To install nodemon as a development dependency on our repository).
 //? Command ---> npm i mongoose (To connect our app to MongoDB Atlas).
 //? Command ---> npm i dotenv (To make our private keys invisible).
-//? Command ---> npm i opener (To open lcoalhost easily and test our content).
+//? Command ---> npm i axios (To request information).
+//? Command ---> npm i morgan (To make HTTP requests).
+//? Command ---> npm i opener (To open localhost easily and test our content).
 //? Command ---> "scripts": { "start": "nodemon src/index.js" } (To enable npm run start).
 //? Command ---> "scripts": { "test": "opener http://localhost:9000" } (To test our app. It is mandatory to run it on a different terminal).
 //? Command ---> npm run start (To execute our main file).
@@ -42,4 +44,4 @@ app.get("/", (req, res) => {
 
 //! -----> Port listening
 // We make app to listen to the port.
-app.listen(9000, () => log("Server is listening on port", port));
+app.listen(process.env.PORT, () => log("Server is listening on port", `${process.env.PORT}`));
