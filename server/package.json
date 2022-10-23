@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "opener http://localhost:9000",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
