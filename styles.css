@@ -1,6 +1,12 @@
-/* --------------- */
-/* CSS Boilerplate */
-/* --------------- */
+/* -------------------- */
+/*! Imports */
+/* -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* -------------------- */
+/*! CSS Boilerplate */
+/* -------------------- */
 
 *,
 *::before,
@@ -23,6 +29,20 @@ img {
 a {
     text-underline-position: under;
     text-decoration-thickness: 8;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+    margin: unset;
 }
 
 menu:not(article menu),
@@ -56,13 +76,156 @@ summary,
     }
 }
 
-/* -------------- */
-/* General Styles */
-/* -------------- */
+/* -------------------- */
+/*! General Styles */
+/* -------------------- */
 
 body {
     background: rgb(2, 0, 36);
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(39, 0, 88, 1) 50%, rgba(70, 0, 157, 1) 100%);
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+/* -------------------- */
+/*! Container */
+/* -------------------- */
+
+.main-box {
+    background-color: #FFF;
+    width: 47.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.25);
+}
+
+/* -------------------- */
+/*! Content */
+/* -------------------- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.main-content h1 {
+    font: 600 28px 'Inter', sans-serif;
+    color: #000;
+}
+
+.main-content h2 {
+    font: 400 14px 'Inter', sans-serif;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.main-content h2 span {
+    font-weight: 600;
+}
+
+.main-content hr {
+    border: 0;
+    height: 2px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(70, 0, 157, 1);
+}
+
+.main-content ul {
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.main-content ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font: 600 14px 'Inter', sans-serif;
+    color: #000;
+}
+
+.main-content ul li.checked {
+    font-weight: 500;
+    color: #a0a0a0;
+    text-decoration: line-through;
+}
+
+.main-content ul li.unchecked:focus {
+    outline: none;
+}
+
+.main-content ul li.checked::before{
+    content: url("public/icon-checked.svg");
+    margin-right: 10px;
+    width: 23px;
+    height: 23px;
+}
+
+.main-content ul li.unchecked::before {
+    content: url("public/icon-unchecked.svg");
+    margin-right: 10px;
+    width: 23px;
+    height: 23px;
+}
+
+/* -------------------- */
+/*! Input */
+/* -------------------- */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #F3F1F2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    min-height: 40px;
+    height: 40px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgba(70, 0, 157, 1);
+    border-radius: 5px;
+}
+
+/* -------------------- */
+/*! Button */
+/* -------------------- */
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(70, 0, 157, 1);
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font: 400 14px 'Inter', sans-serif;
+    padding: 10px;
+    min-height: 40px;
+    height: 40px;
+    transition: all .25s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(39, 0, 86);
+}
+
+button:active {
+    background-color: rgb(126, 35, 238);
 }

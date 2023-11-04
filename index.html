@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
     <title>Check My Notes - TODO App</title>
 </head>
+<!-- Body -->
+
 <body>
-    
+    <!-- Main elements -->
+    <main class="main-box">
+        <section class="main-content">
+            <h1>Check My Notes 🗒️</h1>
+            <hr>
+            <h2><span>Check My Notes</span> is a classic application based on the TODO application formats. Edit your
+                notes, save them, mark them as completed or
+                delete them and write down all your tasks in one place.
+            </h2>
+            <div class="input-container">
+                <input id="input_field" type="text" autofocus>
+                <button id="input_button">Add <i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i></button>
+            </div>
+            <ul>
+                <li class="checked">Go to the groceries store</li>
+                <li class="checked">Call mum to cook dinner</li>
+                <li class="unchecked" contenteditable>Study my maths test</li>
+            </ul>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/4b232f0142.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <noscript><p>Please, enable JavaScript in your browser 💻</p></noscript>
+    <noscript>
+        <p>Please, enable JavaScript in your browser 💻</p>
+    </noscript>
 </body>
+
 </html>
