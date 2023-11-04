@@ -1,0 +1,68 @@
+/* --------------- */
+/* CSS Boilerplate */
+/* --------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-underline-position: under;
+    text-decoration-thickness: 8;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* -------------- */
+/* General Styles */
+/* -------------- */
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(39, 0, 88, 1) 50%, rgba(70, 0, 157, 1) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
