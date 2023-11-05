@@ -137,6 +137,10 @@ hr {
     background-color: rgba(70, 0, 157, 1);
 }
 
+/* -------------------- */
+/*! List */
+/* -------------------- */
+
 ul {
     display: flex;
     flex-direction: column;
