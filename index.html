@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Check My Notes - TODO App</title>
 </head>
 <!-- Body -->
 
 <body>
     <!-- Main elements -->
-    <main class="main-box">
+    <main class="main-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out"
+        data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
         <section class="main-content">
             <h1>Check My Notes 🗒️</h1>
             <hr>
@@ -22,18 +25,24 @@
                 delete them and write down all your tasks in one place.
             </h2>
             <div class="input-container">
-                <input id="input_field" type="text" autofocus>
-                <button id="input_button">Add <i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i></button>
+                <input placeholder="Add your note" id="input_field" type="text" value="" autofocus>
+                <div class="buttons">
+                    <button id="add_button">Add <i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i></button>
+                    <button id="clear_button" onclick="clearNote()">Clear <i class="fa-solid fa-trash fa-sm"
+                            style="color: #ffffff;"></i></button>
+                </div>
             </div>
-            <ul>
-                <li class="checked">Go to the groceries store</li>
-                <li class="checked">Call mum to cook dinner</li>
-                <li class="unchecked" contenteditable>Study my maths test</li>
+            <ul id="notes_list">
             </ul>
         </section>
     </main>
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/4b232f0142.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="index.js"></script>
     <noscript>
         <p>Please, enable JavaScript in your browser 💻</p>

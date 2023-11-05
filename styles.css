@@ -110,25 +110,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.5rem;
+    padding: 4rem;
 }
 
-.main-content h1 {
+h1 {
     font: 600 28px 'Inter', sans-serif;
     color: #000;
 }
 
-.main-content h2 {
+h2 {
     font: 400 14px 'Inter', sans-serif;
     margin-bottom: 20px;
     color: #000;
 }
 
-.main-content h2 span {
+h2 span {
     font-weight: 600;
 }
 
-.main-content hr {
+hr {
     border: 0;
     height: 2px;
     width: 100%;
@@ -137,7 +137,7 @@ body {
     background-color: rgba(70, 0, 157, 1);
 }
 
-.main-content ul {
+ul {
     display: flex;
     flex-direction: column;
     padding: unset;
@@ -145,36 +145,57 @@ body {
     margin-top: 30px;
 }
 
-.main-content ul li {
+ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
     font: 600 14px 'Inter', sans-serif;
     color: #000;
+    position: relative;
+    width: 93%;
+    word-break: break-all;
 }
 
-.main-content ul li.checked {
+ul li.checked {
     font-weight: 500;
     color: #a0a0a0;
     text-decoration: line-through;
 }
 
-.main-content ul li.unchecked:focus {
+ul li.unchecked:focus {
     outline: none;
 }
 
-.main-content ul li.checked::before{
+ul li.checked::before {
     content: url("public/icon-checked.svg");
     margin-right: 10px;
     width: 23px;
     height: 23px;
 }
 
-.main-content ul li.unchecked::before {
+ul li.unchecked::before {
     content: url("public/icon-unchecked.svg");
     margin-right: 10px;
     width: 23px;
     height: 23px;
+}
+
+li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -35px;
+    padding: 5px;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    transition: background-color .25s ease-in-out;
+}
+
+li span:hover {
+    background-color: rgb(226, 203, 255);
+    cursor: pointer;
 }
 
 /* -------------------- */
@@ -189,7 +210,7 @@ body {
 input {
     background-color: #F3F1F2;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 1rem;
     min-height: 40px;
     height: 40px;
@@ -202,8 +223,15 @@ input:focus {
 }
 
 /* -------------------- */
-/*! Button */
+/*! Buttons */
 /* -------------------- */
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
 
 button {
     display: flex;
@@ -217,9 +245,10 @@ button {
     color: #FFF;
     font: 400 14px 'Inter', sans-serif;
     padding: 10px;
+    width: 100%;
     min-height: 40px;
     height: 40px;
-    transition: all .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
 }
 
 button:hover {
@@ -227,5 +256,19 @@ button:hover {
 }
 
 button:active {
-    background-color: rgb(126, 35, 238);
+    background-color: rgb(185, 131, 251);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid rgb(185, 131, 251);
+    border-radius: 5px;
+}
+
+/* -------------------- */
+/*! Toast */
+/* -------------------- */
+
+button.toast-close {
+    width: initial;
 }
